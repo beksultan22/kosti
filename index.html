@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .button{
+            margin: 20px;
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+            background: red;
+            box-shadow: 10px 8px 10px rgba(1,0,0,1);
+        }
+        div{
+            margin: 250px;
+        }
+        body{
+            background: cornflowerblue;
+        }
+        img{
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+     <center>
+        <img src="1k.png" class="img" id="1">
+        <img src="2k.png" class="img" id="2">
+        <img src="3k.png" class="img" id="3">
+        <img src="4k.png" class="img" id="4">
+        <img src="5k.png" class="img" id="5">
+        <img src="6k.png" class="img" id="6">
+        <br>
+     <button class="button" onclick="clik1()">Push</button>
+        <p id="number"></p>
+     </center>
+     </div>
+</body>
+    <script>
+        function draw(id, value) {
+            document.getElementById(id).src = value+"k.png"
+        }
+
+        function clik1() {
+            value1 = Math.floor(Math.random()*6)+1
+            draw(1, value1)
+            value2 = Math.floor(Math.random()*6)+1
+            draw(2, value2)
+            value3 = Math.floor(Math.random()*6)+1
+            draw(3, value3)
+            value4 = Math.floor(Math.random()*6)+1
+            draw(4, value4)
+            value5 = Math.floor(Math.random()*6)+1
+            draw(5, value5)
+            value6 = Math.floor(Math.random()*6)+1
+            draw(6, value6)
+            document.getElementById("number").innerHTML = value1+value2+value3+value4+value5+value6
+        }
+    </script>
+</html>
